@@ -1,1 +1,3 @@
-# frontend-sample\nBuilding a frontend webpage from scratch
+# frontend-sample
+
+Building a frontend webpage from scratch
