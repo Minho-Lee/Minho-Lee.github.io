@@ -4,12 +4,13 @@
 		<title>Frontend project</title>
 
 		<meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<!-- Latest compiled and minified Bootstrap CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+		<link rel="stylesheet" href="css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css"/>
 		<link rel="stylesheet" href="css/animate.css">
 		<link rel="stylesheet" href="css/bootstrapValidator.css">
 		<link rel="stylesheet" href="css/normalize.min.css">
@@ -34,9 +35,9 @@
 	                	<img src="img/minholee_logo.png" height='50px' style="margin-right:20px" alt="Minho-logo"/>
 	                </a>
 	            </div>
-	            <div class='collapse navbar-collapse'>
+	            <div class='collapse navbar-collapse' id="navbar">
 	            	<ul class='nav navbar-nav'>
-	            		<li><a href="#whoWeAre">Who we are</a></li>
+	            		<li class="active"><a href="#whoWeAre">Who we are</a></li>
 	            		<li><a href="#whatWeDo">What we do</a></li>
 	            		<li><a href="#whyChooseUs">Why Choose Us</a></li>
 	            		<li><a href="#ourteam">Our Team</a></li>
@@ -61,15 +62,30 @@
 					   <!-- Wrapper for slides -->
 					 	<div class="carousel-inner">
 					   	<div class="item active">
-					      	<img src="img/computer1.jpg" alt="computer1" height='300' class='carousel-img'>
+					      	<img src="img/comp1.png" alt="computer1" class='carousel-img'>
+					      	<div class='carousel-caption'>
+					      		<h1 class="light">We are <strong class="bold-text">AWESOME</strong></h1>
+					      		<a class="btn btn-lg btn-primary" href="#whatWeDo">Our Work</a>
+					      		<a class="btn btn-lg btn-success" href="#ourteam">Our Team</a>
+					      	</div>
 					    	</div>
 
 						   <div class="item">
-						      <img src="img/computer3_2.gif" alt="computer2" class='carousel-img'>
+						      <img src="img/comp2.png" alt="computer2" class='carousel-img'>
+						      <div class='carousel-caption'>
+					      		<h1 class="light">We are <strong class="bold-text">AWESOME</strong></h1>
+					      		<a class="btn btn-lg btn-primary" href="#whatWeDo">Our Work</a>
+					      		<a class="btn btn-lg btn-success" href="#ourteam">Our Team</a>
+					      	</div>
 						   </div>
 
 					   	<div class="item">
-					      	<img src="img/computer3.jpg" class='carousel-img'>
+					      	<img src="img/comp3.png" alt='computer3' class='carousel-img'>
+					      	<div class='carousel-caption'>
+					      		<h1 class="light">We are <strong class="bold-text">AWESOME</strong></h1>
+					      		<a class="btn btn-lg btn-primary" href="#whatWeDo">Our Work</a>
+					      		<a class="btn btn-lg btn-success" href="#ourteam">Our Team</a>
+					      	</div>
 					    	</div>
 					  	</div>
 
@@ -107,9 +123,9 @@
 
 
 		<!-- Latest compiled Jquery JavaScript -->
-		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+		<script src="js/jquery-3.2.1.min.js"></script>
 		<!-- Latest compiled and minified Bootstrap JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<script src="js/tooltipster.bundle.min.js"></script>
 		<script src="js/main.js"></script>
 	</body>

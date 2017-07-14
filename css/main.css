@@ -3,9 +3,13 @@ html, body {
 	font-family: 'Montserrat', sans-serif;
 }
 
+#navbar{
+	z-index: 100;
+}
+
 /* First Chunk */
 #wrapper-body {
-	padding-top: 50px;
+	/*padding-top: 50px;*/
 }
 
 .carousel-img {
@@ -14,7 +18,7 @@ html, body {
 
 .carousel-inner {
 	height: 100%;
-	max-height: 400px !important;
+	max-height: 600px !important;
 	margin-top: 50px;
 }
 
