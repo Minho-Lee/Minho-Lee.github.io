@@ -12,19 +12,28 @@ html, body {
 	/*padding-top: 50px;*/
 }
 
-.carousel-img {
-
-}
-
 .carousel-inner {
 	height: 100%;
 	max-height: 600px !important;
 	margin-top: 50px;
 }
 
-/*#myCarousel {
-	height: 400px;
-}*/
+.carousel-caption h1 {
+	text-transform: uppercase;
+	font-size: 3em;
+}
+
+.carousel-caption p {
+	font-size : 1.5em;
+	padding-top: 40px;
+	margin-bottom: 20px;
+	font-weight: 300;
+}
+
+.carousel-h1:after {
+	content: "";
+	margin-bottom: 0px;
+}
 /* icon bar */
 .icon-bar {
     width: 100%; /* Full-width */
