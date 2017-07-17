@@ -8,9 +8,6 @@ html, body {
 }
 
 /* First Chunk */
-#wrapper-body {
-	/*padding-top: 50px;*/
-}
 
 .overlay {
     position: absolute;
@@ -27,6 +24,16 @@ header .carousel,
 header .item,
 header .active {
     height: 100%;
+}
+
+#header {
+    margin-bottom: 6em;
+}
+
+@media (max-width: 768px) {
+    #header {
+        margin-bottom: 8.5em;
+    }
 }
 
 .fill {
@@ -80,10 +87,6 @@ header .active {
         margin-bottom: 1.1em;
     }
 }
-/*#after-carousel {
-	background-color: red;
-	color: white;
-}*/
 
 /* icon bar */
 .icon-bar {
@@ -106,55 +109,30 @@ header .active {
     background-color: #000; /* Add a hover color */
 }
 
-/* Dropdown Button */
-.dropbtn {
-    background-color: rgb(34,34,34);
-    color: #9d9d9d;
-    padding: 15px;
-    font-size: 14px;
-    border: none;
-    cursor: pointer;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #fbf7f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-    color: black;
-    padding: 12px 12px;
-    text-decoration: none;
-    display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {
-  background-color: #f1f1f1
-}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
+#post-carousel {
+    background-color: #f64653;
     color: white;
+    padding: 1em 0em;
+    vertical-align: middle;
 }
+
+#post-carousel h4 {
+    font-size: 1.5em;
+    padding-top: 0.355em;
+}
+#portfolio {
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 1em 3em 1em 2em;
+    font-size: 1.3em;
+}
+
 /* Second Chunk */
+/*#section2 {
+    margin-top: 6em;
+}*/
+
 /*  */
 /*  */
 /*  */

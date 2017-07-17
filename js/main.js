@@ -5,8 +5,9 @@ $(document).ready(function() {
    document.documentElement.scrollTop = 0; // For IE and Firefox
 
 	$(document).click(function(event) {
-		var clickover = $(event.target);
-		var _opened = $('.navbar-collapse').hasClass('in');
+		var clickover = $(event.target),
+		 	_opened = $('.navbar-collapse').hasClass('in'),
+			$parent = clickover.parent();
 
 		var navMain = $(".navbar-collapse");
 
@@ -17,17 +18,27 @@ $(document).ready(function() {
 		if (!clickover.hasClass('navbar-collapse') && _opened) {
 			navMain.collapse('hide');
 		}
+
+	if (!$parent.hasClass('active')) {
+		//console.log($("nav ul li"));
+		$("nav ul li").removeClass('active');
+		$parent.addClass('active');
+
+	}
+
 	if (clickover.attr('href') === '#whoWeAre') {
-			scrollTo('section1');
-		} else if (clickover.attr('href') === '#whatWeDo') {
-			scrollTo('section2');
-		} else if (clickover.attr('href') === '#whyChooseUs') {
-			scrollTo('section3');
-		} else if (clickover.attr('href') === '#ourteam') {
-			scrollTo('section4');
-		} else if (clickover.attr('href') === '#contactUs') {
-			scrollTo('section5');
-		}
+		scrollTo('section1');
+	} else if (clickover.attr('href') === '#whatWeDo') {
+		scrollTo('section2');
+	} else if (clickover.attr('href') === '#whyChooseUs') {
+		scrollTo('section3');
+	} else if (clickover.attr('href') === '#ourteam') {
+		scrollTo('section4');
+	} else if (clickover.attr('href') === '#contactUs') {
+		scrollTo('section5');
+	}
+
+	event.preventDefault();
 	});//document.click
 });//document.ready
 
