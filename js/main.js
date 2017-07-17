@@ -1,7 +1,6 @@
 $(document).ready(function() {
 
 	//when refreshed, scroll back to the top automatically
-	scrollTo('wrapper-body');
    $('body').scrollTop('0'); //For Chrome, Safari and Opera
    document.documentElement.scrollTop = 0; // For IE and Firefox
 
@@ -36,5 +35,5 @@ $(document).ready(function() {
 var scrollTo = function(id) {
    $('html, body').animate({
                   scrollTop: $("#" + id).offset().top-50
-               }, 1500);
+               }, 1000);
 }
