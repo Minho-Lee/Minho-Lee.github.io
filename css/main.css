@@ -9,7 +9,7 @@ html, body {
 
 /* First Chunk */
 
-.overlay {
+.carousel-inner .overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -129,9 +129,27 @@ header .active {
 }
 
 /* Second Chunk */
-/*#section2 {
-    margin-top: 6em;
-}*/
+.about-us {
+  background: url("../img/about-us-bg.jpg") no-repeat center fixed;
+  background-size: cover;
+  position: relative;
+}
+
+.about-us .overlay {
+  background: rgba(238, 238, 238, 0.95);
+}
+
+.content {
+    padding: 5em;
+}
+
+#title:after {
+    content: '';
+    display: block;
+    border-bottom: 1px solid black;
+    padding-bottom: 1em;
+    width: 10em;
+}
 
 /*  */
 /*  */
