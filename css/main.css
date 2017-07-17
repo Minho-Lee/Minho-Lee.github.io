@@ -46,9 +46,6 @@ header .active {
 .carousel-inner {
 	min-height: 500px;
     height: 100%;
-	/*max-width: 1242px !important;
-    width:100%;
-	margin-top: 50px;*/
 }
 
 .carousel-inner > .item > img {
@@ -78,19 +75,16 @@ header .active {
 	font-weight: 300;
 }
 
-.carousel-caption {
-    /*color: black;*/
+@media (min-width:768px) {
+    .call-button {
+        margin-bottom: 1.1em;
+    }
 }
-
-.carousel-h1:after {
-	content: "";
-	margin-bottom: 0px;
-}
-
 /*#after-carousel {
 	background-color: red;
 	color: white;
 }*/
+
 /* icon bar */
 .icon-bar {
     width: 100%; /* Full-width */
