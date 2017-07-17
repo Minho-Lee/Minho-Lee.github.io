@@ -27,12 +27,12 @@ header .active {
 }
 
 #header {
-    margin-bottom: 6em;
+    margin-bottom: 5.1em;
 }
 
 @media (max-width: 768px) {
     #header {
-        margin-bottom: 8.5em;
+        margin-bottom: 7.55em;
     }
 }
 
@@ -118,14 +118,40 @@ header .active {
 
 #post-carousel h4 {
     font-size: 1.5em;
-    padding-top: 0.355em;
+    padding-top: 0.42em;
 }
+
 #portfolio {
     color: white;
     border: 1px solid white;
     border-radius: 5px;
-    padding: 1em 3em 1em 2em;
+    padding: 1em 2.7em 1em 2em;
     font-size: 1.3em;
+}
+
+@media (max-width: 767px) and (min-width: 409px) {
+    #portfolio {
+        padding : 0.5em 2.7em 0.5em 2em;
+    }
+
+    #header {
+
+    }
+}
+
+@media (max-width: 408px) {
+    #portfolio {
+        padding : 0.5em 2.7em 0.5em 2em;   
+    }
+
+    #post-carousel {
+        padding-bottom: 1.22em;
+        padding-top: 0.7em;
+    }
+
+    #post-carousel h4 {
+        padding-top: 0;
+    }
 }
 
 /* Second Chunk */
