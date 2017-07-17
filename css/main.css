@@ -167,9 +167,16 @@ header .active {
     content: '';
     display: block;
     border-bottom: 0.2em solid red;
-    padding-bottom: 0.5em;
+    /*padding-bottom: 0.5em;*/
+    margin-bottom: 1em;
     width: 8em;
-    margin-left: 1em;
+    margin-left: 0.5em;
+}
+
+.content p {
+    font-size: 2.4em;
+    line-height: 200%;
+    display:block;
 }
 
 @media only screen and (max-width: 479px) {
@@ -181,7 +188,12 @@ header .active {
     h1 {
         text-align: center;
     }
+    .content p {
+        font-size: 1.7em;
+    }
 }
+
+
 /*  */
 /*  */
 /*  */
