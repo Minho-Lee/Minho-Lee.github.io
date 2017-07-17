@@ -133,22 +133,16 @@ header .active {
     #portfolio {
         padding : 0.5em 2.7em 0.5em 2em;
     }
-
-    #header {
-
-    }
 }
 
 @media (max-width: 408px) {
     #portfolio {
         padding : 0.5em 2.7em 0.5em 2em;   
     }
-
     #post-carousel {
         padding-bottom: 1.22em;
         padding-top: 0.7em;
     }
-
     #post-carousel h4 {
         padding-top: 0;
     }
@@ -172,11 +166,22 @@ header .active {
 #title:after {
     content: '';
     display: block;
-    border-bottom: 1px solid black;
-    padding-bottom: 1em;
-    width: 10em;
+    border-bottom: 0.2em solid red;
+    padding-bottom: 0.5em;
+    width: 8em;
+    margin-left: 1em;
 }
 
+@media only screen and (max-width: 479px) {
+    #title:after{
+        position: relative;
+        margin-left: auto;
+        margin-right:auto;
+    }
+    h1 {
+        text-align: center;
+    }
+}
 /*  */
 /*  */
 /*  */
@@ -189,3 +194,10 @@ header .active {
 /*  */
 /*  */
 /*  */
+
+
+
+ 
+ 
+    
+
