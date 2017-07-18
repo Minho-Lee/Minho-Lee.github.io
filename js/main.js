@@ -1,20 +1,20 @@
 $(document).ready(function() {
 
 	//when refreshed, scroll back to the top automatically
+	scrollToFast('header');
    $('body').scrollTop('0'); //For Chrome, Safari and Opera
    document.documentElement.scrollTop = 0; // For IE and Firefox
 
-   	$('nav li a').click(function(e) {
+	$('nav li a').click(function(e) {
 
-   		var $parent = $(this).parent();
-   		if (!$parent.hasClass('active')) {
-			//console.log($("nav ul li"));
-			//console.log($(this)[0]);
-			$("nav ul li").removeClass('active');
+		var $parent = $(this).parent();
+		if (!$parent.hasClass('active')) {
+		//console.log($("nav ul li"));
+		//console.log($(this)[0]);
+		$("nav ul li").removeClass('active');
 			$parent.addClass('active');
 		}
-		e.preventDefault();
-   	});
+   });
 
 	$(document).click(function(event) {
 		var clickover = $(event.target),
@@ -44,7 +44,7 @@ $(document).ready(function() {
 			scrollTo('section5');
 		}
 
-		event.preventDefault();
+		//event.preventDefault();
 	});//document.click
 
 	$(".icon-section").mouseenter(function() {
@@ -75,3 +75,12 @@ var scrollTo = function(id) {
                   scrollTop: $("#" + id).offset().top-50
                }, 1000);
 }
+
+var scrollToFast = function(id) {
+   $('html, body').animate({
+                  scrollTop: $("#" + id).offset().top-50
+               }, 
+               {duration: 500});
+}
+
+
