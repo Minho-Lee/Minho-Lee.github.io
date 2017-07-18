@@ -194,7 +194,34 @@ header .active {
 }
 
 
-/*  */
+/* Third Chunk */
+#section3 {
+    background-color: #00d664;
+    padding-bottom: 4em;
+}
+
+#icon-title{
+    color: white;
+    text-align: center;
+    margin-top: 2em;
+    text-transform: uppercase;
+}
+
+#section3 .icon-section{
+    margin-top: 4em;
+    text-align: center;
+}
+
+#section3 .icon-section img{
+    margin: auto;
+    display: block;
+    padding-bottom: 1em;
+}
+
+.icon-section .options {
+    line-height: 100%;
+}
+
 /*  */
 /*  */
 /*  */
