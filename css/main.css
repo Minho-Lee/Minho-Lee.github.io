@@ -224,10 +224,8 @@ img.img-hover {
 img.img-default {
     display: inherit;
 }
-.icon-section:hover {
-    background-color: white;
-}
 
+/*background color change for icons*/
 .icon-section{
     background-color: inherit;
     margin-top: 4em;
@@ -237,9 +235,11 @@ img.img-default {
     -o-transition: background-color 0.5s linear;
     -ms-transition: background-color 0.5s linear;
     transition: background-color 0.5s linear;
-
-
 }
+.icon-section:hover {
+    background-color: white;
+}
+
 
 .icon-section:hover .img-hover {
     display: inherit;
@@ -257,20 +257,28 @@ img.img-default {
 }
 
 .icon-section .options {
-    color: #00d664;
-    transition: color 0.5s linear;
-    -webkit-transition: color 0.5s linear;
-    -moz-transition: color 0.5s linear;
-    -o-transition: color 0.5s linear;
-    -ms-transition: color 0.5s linear;
+    opacity: 0;
+    color: gray;
+    transition: opacity 0.5s linear;
+    -webkit-transition: opacity 0.5s linear;
+    -moz-transition: opacity 0.5s linear;
+    -o-transition: opacity 0.5s linear;
+    -ms-transition: opacity 0.5s linear;
+}
+.icon-section:hover .options {
+    opacity: 1;
 }
 
-.icon-section:hover .options {
-    color: gray;
+.icon-section .options .active {
+    color: #00d664;
 }
 
 .options .service-links {
     margin: 0.4em 0;
+}
+
+.glyphicon-md {
+    font-size: 1.2em;
 }
 /*  */
 /*  */
