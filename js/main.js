@@ -78,20 +78,19 @@ $(document).ready(function() {
 	// });
 
 	//switching between plus minus icons
-	$('.panel-group .panel').on('shown.bs.collapse', function() {
-		console.log('hi');
+	$('.panel-group .panel').on('show.bs.collapse', function() {
 		$(this).find('i').toggleClass('hidden');
+		$(this).toggleClass('panel-danger');
 	});
-	$('.panel-group .panel').on('hidden.bs.collapse', function() {
+	$('.panel-group .panel').on('hide.bs.collapse', function() {
 		$(this).find('i').toggleClass('hidden');
+		$(this).toggleClass('panel-danger');
 	});
 	//panel group (collapsing panels)
-	$('.panel-group').on('click' , '.panel' , function() {
+	$('.panel-group .panel').on('click' , '.panel-title' , function() {
 		//console.log($('.panel-group .panel').not($(this)));
-		$('.panel-group .panel').not($(this)).find('.collapse.in').collapse('toggle')
-			.data('open'. false);
-		$(this).data('open', true);
-
+		$('.panel-group .panel').not($(this)).find('.collapse.in').collapse('toggle');
+		console.log($('.panel-group .panel').not($(this)).next());
 	});
 });//document.ready
 

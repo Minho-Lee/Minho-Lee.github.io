@@ -1,3 +1,5 @@
+/* Author: Minho Lee*/
+/* https://github.com/minho-lee */
 /* GLOBAL */
 html, body {
 	font-family: 'Montserrat', sans-serif;
@@ -50,6 +52,10 @@ html, body {
 .margin-medium {
   margin-top: 40px;
   margin-bottom: 40px;
+}
+.margin-small {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 .margin-top-large {
   margin-top: 90px;
@@ -116,6 +122,7 @@ html, body {
   float: initial;
 }
 
+/************************************************/
 /* First Chunk */
 
 .carousel-inner .overlay {
@@ -161,18 +168,18 @@ header .active {
 }
 .carousel-inner {
 	min-height: 500px;
-    height: 100%;
+  height: 100%;
 }
 
 .carousel-inner > .item > img {
-    position: relative;
-    width:100%;
-    height: 100%;
-    background-position: center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+  position: relative;
+  width:100%;
+  height: 100%;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
 }
 .carousel-control.left,
 .carousel-control.right {
@@ -257,6 +264,7 @@ header .active {
     }
 }
 
+/************************************************/
 /* Second Chunk */
 .about-us {
   background: url("../img/about-us-bg.jpg") no-repeat center fixed;
@@ -272,7 +280,7 @@ header .active {
     padding: 5em;
 }
 
-#title:after {
+.title:after {
     content: '';
     display: block;
     border-bottom: 0.2em solid red;
@@ -287,16 +295,16 @@ header .active {
     line-height: 200%;
     display:block;
 }
-.about-us .lorem {
+.lorem {
   padding-left: 5em;
   padding-right: 5em;
 }
-.about-us .lorem h4{
+.lorem h4{
   line-height: 2.0;
 }
 
 @media only screen and (max-width: 479px) {
-    #title:after{
+    .title:after{
         position: relative;
         margin-left: auto;
         margin-right:auto;
@@ -309,7 +317,15 @@ header .active {
     }
 }
 
+@media (max-width: 991px) {
+  .about-us #thumbs-up {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
+/************************************************/
 /* Third Chunk */
 #section3 {
     background-color: #00d664;
@@ -427,6 +443,7 @@ img.img-default {
   }
 }
 
+/************************************************/
 /* Fourth Section */
 #section4 {
   background: url("../img/background.jpg") no-repeat center fixed;

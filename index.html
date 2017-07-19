@@ -149,7 +149,7 @@
 					<div class="content row">
 						<div class="col-md-7">
 							<div class="row">
-								<div id="title">
+								<div class="title">
 									<h1><b>About</b> <font color="#f64653">US</font></h1>
 								</div>
 							</div>
@@ -160,61 +160,64 @@
 						<div class="col-md-5">
 							<img class='center-block img-responsive' src='img/about-side-side.png' alt='about-side-side'/>
 						</div>
-					</div>
+					</div><!--row-->
 
 					<div class="row lorem">
 						<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>
 					</div>
+					<div class="row">
+						<div class="col-md-8 margin-top-medium" style="padding-left: 5em; padding-right:5em">
+							<div class="panel-group" role='tablist'>
+								<div class="panel panel-success">
+									<div class="panel-heading" role='tab'>
+										<h4 role='button' class="panel-title" data-toggle='collapse' href="#collapse1">
+											<i class="fa fa-plus-circle"></i><i class="fa fa-minus hidden"></i> Collapsable Link 1
+										</h4>
+									</div>
+									<div id="collapse1" class="panel-collapse collapse">
+										<ul class="list-group">
+									        <li class="list-group-item">One</li>
+									        <li class="list-group-item">Two</li>
+									        <li class="list-group-item">Three</li>
+									    </ul>
+									</div>
+								</div>
 
-					<div class="panel-group" role='tablist'>
-						<div class="panel panel-success">
-							<div class="panel-heading" role='tab'>
-								<h4 role='button' class="panel-title" data-toggle='collapse' href="#collapse1">
-									<i class="fa fa-plus-circle"></i><i class="fa fa-minus hidden"></i> Collapsable Link 1
-								</h4>
-							</div>
-							<div id="collapse1" class="panel-collapse collapse">
-								<ul class="list-group">
-							        <li class="list-group-item">One</li>
-							        <li class="list-group-item">Two</li>
-							        <li class="list-group-item">Three</li>
-							    </ul>
-							    <div class="panel-footer">Footer</div>
-							</div>
-						</div>
+								<div class="panel panel-warning">
+									<div class="panel-heading" role='tab'>
+										<h4 role='button' class="panel-title" data-toggle='collapse' href="#collapse2">
+											<i class="fa fa-plus-circle"></i><i class="fa fa-minus hidden"></i> Collapsable Link 2
+										</h4>
+									</div>
+									<div id="collapse2" class="panel-collapse collapse">
+										<ul class="list-group">
+									        <li class="list-group-item">One</li>
+									        <li class="list-group-item">Two</li>
+									        <li class="list-group-item">Three</li>
+									    </ul>
+									</div>
+								</div>
 
-						<div class="panel panel-warning">
-							<div class="panel-heading" role='tab'>
-								<h4 role='button' class="panel-title" data-toggle='collapse' href="#collapse2">
-									<i class="fa fa-plus-circle"></i><i class="fa fa-minus hidden"></i> Collapsable Link 2
-								</h4>
-							</div>
-							<div id="collapse2" class="panel-collapse collapse">
-								<ul class="list-group">
-							        <li class="list-group-item">One</li>
-							        <li class="list-group-item">Two</li>
-							        <li class="list-group-item">Three</li>
-							    </ul>
-							    <div class="panel-footer">Footer</div>
-							</div>
-						</div>
-
-						<div class="panel panel-primary">
-							<div class="panel-heading" role='tab'>
-								<h4 role='button' class="panel-title" data-toggle='collapse' href="#collapse3">
-									<i class="fa fa-plus-circle"></i><i class="fa fa-minus hidden"></i> Collapsable Link 3
-								</h4>
-							</div>
-							<div id="collapse3" class="panel-collapse collapse">
-								<ul class="list-group">
-							        <li class="list-group-item">One</li>
-							        <li class="list-group-item">Two</li>
-							        <li class="list-group-item">Three</li>
-							    </ul>
-							    <div class="panel-footer">Footer</div>
-							</div>
-						</div>
-					</div><!--panel-group-->
+								<div class="panel panel-primary">
+									<div class="panel-heading" role='tab'>
+										<h4 role='button' class="panel-title" data-toggle='collapse' href="#collapse3">
+											<i class="fa fa-plus-circle"></i><i class="fa fa-minus hidden"></i> Collapsable Link 3
+										</h4>
+									</div>
+									<div id="collapse3" class="panel-collapse collapse">
+										<ul class="list-group">
+									        <li class="list-group-item">One</li>
+									        <li class="list-group-item">Two</li>
+									        <li class="list-group-item">Three</li>
+									    </ul>
+									</div>
+								</div>
+							</div><!--panel-group-->
+						</div><!--col-md-7-->
+						<div class="col-md-4">
+							<img id="thumbs-up" src='img/thumbs-up-guy.png'/>
+						</div><!--col-md-5-->
+					</div><!--row-->
 				</div><!--container-fluid-->
 			</div><!--overlay-->
 		</div><!--what we do-->
@@ -302,15 +305,41 @@
 			</div>
 		</div><!--section3-->
 
-		<div id='section4' style="height:500px">
+		<div id='section4'>
 			<div class="overlay">
 				<div class="container-fluid">
-					<div class="row text-center margin-top-medium">
-						<h1>Meet Our Team!</h1>
-					</div>
+					<div class="content row" style="padding-bottom: 2.5em" >
+						<div class='title'>
+						<h1>Our <b>Awesome</b> <font color="#f64653">Team</font></h1>
+						</div>
+					</div><!--row-->
+					<div class="row lorem">
+						<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>
+					</div><!--row-->
 				</div>
-			</div>
-		</div>
+				<div class="container">
+					<div class="row">
+						<section id="teamMembers">
+							<!-- NTS: adding margin-top and marg-bot in section doesn't apply in this case because the picture dimensions already overflow the allotted slot -->
+							<div class="col-md-3 col-sm-6 col-xs-12 margin-top-medium margin-bottom-large">
+								<div class="">
+									<img src="img/team/team-member-1.jpg" class='img-responsive center-block'/>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6 col-xs-12 margin-top-medium margin-bottom-large">
+								<img src="img/team/team-member-2.jpg" class='img-responsive center-block'/>
+							</div>
+							<div class="col-md-3 col-sm-6 col-xs-12 margin-top-medium margin-bottom-large">
+								<img src="img/team/team-member-3.jpg" class='img-responsive center-block'/>
+							</div>
+							<div class="col-md-3 col-sm-6 col-xs-12 margin-top-medium margin-bottom-large">
+								<img src="img/team/team-member-4.jpg" class='img-responsive center-block'/>
+							</div>
+						</section>
+					</div><!--row-->
+				</div><!--container-fluid-->
+			</div><!--overlay-->
+		</div><!--section4-->
 
 		<div id='section5' class="container-fluid" style="height:300px">
 			<h1>INSERT CONTACT US</h1>
