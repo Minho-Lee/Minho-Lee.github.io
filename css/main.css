@@ -38,6 +38,12 @@ html, body {
 .margin-bottom-medium {
   margin-bottom: 40px;
 }
+.margin-right-medium {
+  margin-right: 40px;
+}
+.margin-left-medium{
+  margin-left: 40px;
+}
 .margin-bottom-small {
   margin-bottom: 25px;
 }
@@ -255,6 +261,13 @@ header .active {
     font-size: 2.4em;
     line-height: 200%;
     display:block;
+}
+.about-us .lorem {
+  padding-left: 5em;
+  padding-right: 5em;
+}
+.about-us .lorem h4{
+  line-height: 2.0;
 }
 
 @media only screen and (max-width: 479px) {

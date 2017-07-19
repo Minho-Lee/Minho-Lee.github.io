@@ -2,9 +2,9 @@ $(document).ready(function() {
 
 	//when refreshed, scroll back to the top automatically
 	//commenting it out for development purposes. 
-	scrollToFast('header');
-   	$('body').scrollTop('0'); //For Chrome, Safari and Opera
-   	document.documentElement.scrollTop = 0; // For IE and Firefox
+	// scrollToFast('header');
+ //   	$('body').scrollTop('0'); //For Chrome, Safari and Opera
+ //   	document.documentElement.scrollTop = 0; // For IE and Firefox
 
 	$('nav li a').click(function(e) {
 
@@ -63,11 +63,11 @@ $(document).ready(function() {
 	});
 	
 		
-	// 	$(this).css({'color': 'black'});
-	// },
-	// function() {
-	// 	$(this).css({'color': 'gray'});
-	// });
+	//panel group
+	$(".panel-group").on('click', 'h4' ,function() {
+		var $i = $(this).find('i').hasClass('hidden');
+		console.log($i);
+	});
 });//document.ready
 
 //scrolls to the given id's position
