@@ -1,9 +1,10 @@
 $(document).ready(function() {
 
 	//when refreshed, scroll back to the top automatically
+	//commenting it out for development purposes. 
 	scrollToFast('header');
-   $('body').scrollTop('0'); //For Chrome, Safari and Opera
-   document.documentElement.scrollTop = 0; // For IE and Firefox
+   	$('body').scrollTop('0'); //For Chrome, Safari and Opera
+   	document.documentElement.scrollTop = 0; // For IE and Firefox
 
 	$('nav li a').click(function(e) {
 

@@ -47,8 +47,14 @@ html, body {
 .margin-left-small {
   margin-left: 15px;
 }
+.margin-top-small {
+  margin-top: 15px;
+}
 .padding-left-small{
   padding-left: 15px;
+}
+.margin-top-xs {
+  margin-top: 5px;
 }
 .mat-none {
   margin-top: 0;
@@ -71,6 +77,12 @@ html, body {
 }
 .float-none{
   float:none;
+}
+.float-inherit {
+  float:inherit;
+}
+.float-initial {
+  float: initial;
 }
 
 /* First Chunk */
@@ -359,6 +371,11 @@ img.img-default {
 #small-icon-wrapper h4 {
   color: #fff;
 }
+#small-icon-wrapper .service-arrows{
+  float:right;
+  margin: 0.9em 1em 0 0;
+  color: white;
+}
 @media (max-width: 768px) {
   #big-icon-wrapper {
     display:none;
@@ -371,7 +388,19 @@ img.img-default {
     display: inherit;
   }
 }
-/*  */
+
+/* Fourth Section */
+#section4 {
+  background: url("../img/background.jpg") no-repeat center fixed;
+  background-size: cover;
+  position: relative;
+}
+
+#section4 .overlay {
+  background: rgba(238, 238, 238, 0.9);
+  height: 100%;
+}
+
 /*  */
 /*  */
 /*  */
