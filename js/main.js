@@ -62,11 +62,33 @@ $(document).ready(function() {
 		});//hover	
 	});
 	
-		
-	//panel group
-	$(".panel-group").on('click', 'h4' ,function() {
-		var $i = $(this).find('i').hasClass('hidden');
-		console.log($i);
+	var panelClick = true;
+	//panel group (fa icon)
+	// $(".panel-group").on('click', 'h4' ,function() {
+	// 	// $(this).find('i:not(.hidden)').toggleClass('hidden');
+	// 	//changes fa icon from plus to minus and back
+	// 	if ($(this).parent().parent().data('open') === true ||
+	// 		$(this).parent().parent().data('open') === 'undefined') {
+	// 		$(this).find('i').toggleClass('hidden');	
+	// 	}
+	// 	// $(this).find('i').toggleClass('hidden');
+	// });
+
+	//switching between plus minus icons
+	$('.panel-group .panel').on('shown.bs.collapse', function() {
+		console.log('hi');
+		$(this).find('i').toggleClass('hidden');
+	});
+	$('.panel-group .panel').on('hidden.bs.collapse', function() {
+		$(this).find('i').toggleClass('hidden');
+	});
+	//panel group (collapsing panels)
+	$('.panel-group').on('click' , '.panel' , function() {
+		//console.log($('.panel-group .panel').not($(this)));
+		$('.panel-group .panel').not($(this)).find('.collapse.in').collapse('toggle')
+			.data('open'. false);
+		$(this).data('open', true);
+
 	});
 });//document.ready
 
