@@ -92,6 +92,16 @@ $(document).ready(function() {
 		$('.panel-group .panel').not($(this)).find('.collapse.in').collapse('toggle');
 		console.log($('.panel-group .panel').not($(this)).next());
 	});
+	
+   $(document).ajaxStart(function () {     
+       $("html").addClass("loading");
+    });
+    $(document).ajaxStop(function () {        
+        $("html").removeClass("loading");
+    });
+    $(document).ajaxError(function () {       
+        $("html").removeClass("loading");
+    }); 
 });//document.ready
 
 //scrolls to the given id's position
