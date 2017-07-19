@@ -50,15 +50,15 @@ $(document).ready(function() {
 
 	$(".icon-section").mouseenter(function() {
 		$(".options .service-links").hover(function() {
-			$(this).toggleClass('active');
+			$(this).addClass('active');
 		}, function() {
-			$(this).toggleClass('active');
+			$(this).removeClass('active');
 		});//hover	
 	}).mouseleave(function() {
 		$(".options .service-links").hover(function() {
-			$(this).toggleClass('active');
+			$(this).addClass('active');
 		}, function() {
-			$(this).toggleClass('active');
+			$(this).removeClass('active');
 		});//hover	
 	});
 	
