@@ -2,6 +2,31 @@
 html, body {
 	font-family: 'Montserrat', sans-serif;
 }
+.back-to-top {
+  background: none; 
+  margin: 0;
+  position: fixed; 
+  padding: 7px 9px;
+  bottom: 0.5em; 
+  right: 0.5em;
+  width: 3em;
+  height: 3em;
+  z-index: 100;
+  display: inline;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #ff9000;
+  border-radius: 1em;
+}
+.back-to-top i {
+  font-size: 2em;
+}
+.back-to-top i:hover {
+  color: #5b94ef;
+}
+.back-to-top:visited {
+  color: #ffffff;
+}
 
 #navbar{
 	z-index: 100;

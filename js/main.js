@@ -5,7 +5,10 @@ $(document).ready(function() {
 	// scrollToFast('header');
  //   	$('body').scrollTop('0'); //For Chrome, Safari and Opera
  //   	document.documentElement.scrollTop = 0; // For IE and Firefox
-
+ 	$('.back-to-top').click(function(e) {
+ 		scrollToFast('header');
+ 		e.preventDefault();
+ 	});
 	$('nav li a').click(function(e) {
 
 		var $parent = $(this).parent();
