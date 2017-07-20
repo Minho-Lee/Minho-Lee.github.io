@@ -4,7 +4,6 @@ $(window).bind("load", function () {
 });
 
 
-
 $(document).ready(function() {
 
 	//when refreshed, scroll back to the top automatically
