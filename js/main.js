@@ -106,7 +106,7 @@ $(document).ready(function() {
 $(window).scroll(function() {
 	//console.log($(window).scrollTop() + ' / ' + ($("#section1").offset().top + $("#section1").height()));
 	//console.log($(window).height() + $(window).scrollTop());
-	if (($(window).scrollTop() + $(window).height() > $("#section1").height()) &&
+	if (($(window).scrollTop() + $(window).height() > $("#section1").height()+ 50) &&
 		 $("#section2").data('animated') === false) {
 			$("#section2 .insert-animation-left").addClass('slideInLeft');
 			$("#section2 .insert-animation-right").addClass('slideInRight');

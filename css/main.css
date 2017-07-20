@@ -483,6 +483,8 @@ img.img-default {
 }
 
 #team .team-member {
+  animation-duration: 1.5s;
+  animation-delay: 1s;
   border: 1px solid #ea685b;
   width: 220px;
   height: 300px;
@@ -492,19 +494,33 @@ img.img-default {
   width: 100%;
 }
 #team .team-overlay {
-  background: rgb(231, 76, 60);
+  color: #fff;
+  position:relative;
+  margin-top: 0;
+  width: 220px; 
 }
 #team .team-member:hover > .team-overlay {
-  margin-top: -300px;
+  margin-top: -317px;
   transition: all 0.8s;
+}
+#team .team-member .person-info {
+  background-color: rgba(231, 76, 60, 0.9);
+  height: 258px;
+  padding: 100px 20px 20px;
+}
+.person-info p {
+  letter-spacing: 0.1em;
 }
 #team .team-member .popup-info {
   height: 60px;
-  margin-top: 3em;
+  line-height: 60px;
   cursor: pointer;
-  background: red;
-  background-color: red;
+  background-color: rgb(193, 57, 43);
+  font-family: 'Open-Sans', sans-serif;
+  font-size: 1.2em;
 }
+
+
 
 /*  */
 /*  */
