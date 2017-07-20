@@ -5,35 +5,33 @@ html, body {
 	font-family: 'Montserrat', sans-serif;
 }
 
-html {
-    -webkit-transition: background-color 1s;
-    transition: background-color 1s;
+#work-in-progress {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  font-size: 150px;
+  text-align: center;
+  vertical-align: middle;
+  color: #000000;
+  z-index: 200000;
+  background-color: #FFFFFF;
 }
-html, body {
-    /* For the loading indicator to be vertically centered ensure */
-    /* the html and body elements take up the full viewport */
-    min-height: 100%;
-}
-html.loading {
-    /* Replace #333 with the background-color of your choice */
-    /* Replace loading.gif with the loading image of your choice */
-    background: #333 url('../../sample1.gif') no-repeat 50% 50%;
 
-    /* Ensures that the transition only runs in one direction */
-    -webkit-transition: background-color 0;
-    transition: background-color 0;
-}
-body {
-    -webkit-transition: opacity 1s ease-in;
-    transition: opacity 1s ease-in;
-}
-html.loading body {
-    /* Make the contents of the body opaque during loading */
-    opacity: 0;
-
-    /* Ensures that the transition only runs in one direction */
-    -webkit-transition: opacity 0;
-    transition: opacity 0;
+.work-spinner {
+  background-color: rgba(0,0,0,0);
+  border: 9px solid rgba(27,61,226,0.9);
+  opacity: .9;
+  border-left: 5px solid rgba(0,0,0,0);
+  border-radius: 120px;
+  -webkit-box-shadow: 0 0 35px #1B3DE2;
+  box-shadow: 0 0 35px #1B3DE2;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  -moz-animation: spin .5s infinite linear;
+  -webkit-animation: spin .5s infinite linear;
+  -o-animation: spin .5s infinite linear;
+  animation: spin .5s infinite linear;
 }
 
 .back-to-top {
@@ -484,7 +482,7 @@ img.img-default {
 }
 
 #section4 .overlay {
-  background: rgba(238, 238, 238, 0.9);
+  background: rgba(238, 238, 238, 0.95);
   height: 100%;
 }
 

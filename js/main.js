@@ -1,3 +1,8 @@
+
+$(window).bind("load", function () {
+    $('#work-in-progress').fadeOut(100);
+});
+
 $(document).ready(function() {
 
 	//when refreshed, scroll back to the top automatically
@@ -87,7 +92,7 @@ $(document).ready(function() {
 		$(this).toggleClass('panel-danger');
 	});
 	//panel group (collapsing panels)
-	$('.panel-group .panel').on('click' , '.panel-title' , function() {
+	$('.panel-group .panel').on('click', '.panel-title' , function() {
 		//console.log($('.panel-group .panel').not($(this)));
 		$('.panel-group .panel').not($(this)).find('.collapse.in').collapse('toggle');
 		console.log($('.panel-group .panel').not($(this)).next());
