@@ -499,11 +499,12 @@ img.img-default {
   transition: all 0.8s;
 }
 #team .team-member .popup-info {
+  height: 60px;
   margin-top: 3em;
   cursor: pointer;
   background: red;
+  background-color: red;
 }
-
 
 /*  */
 /*  */
