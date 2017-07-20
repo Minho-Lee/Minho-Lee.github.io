@@ -401,19 +401,15 @@ img.img-default {
     -ms-transition: background-color 0.5s linear;
     transition: background-color 0.5s linear;
 }
-
 .icon-section:hover {
     background-color: white;
 }
-
-
 .icon-section:hover .img-hover {
     display: inherit;
 }
 .icon-section:hover .img-default {
     display: none;
 }
-
 .icon-section h4 {
   color: white;
   margin-bottom: 0.8em;
@@ -486,9 +482,29 @@ img.img-default {
   height: 100%;
 }
 
-.team-member {
+#team .team-member {
   border: 1px solid #ea685b;
+  width: 220px;
+  height: 300px;
+  overflow: hidden;
 }
+#team .team-member img {
+  width: 100%;
+}
+#team .team-overlay {
+  background: rgb(231, 76, 60);
+}
+#team .team-member:hover > .team-overlay {
+  margin-top: -300px;
+  transition: all 0.8s;
+}
+#team .team-member .popup-info {
+  margin-top: 3em;
+  cursor: pointer;
+  background: red;
+}
+
+
 /*  */
 /*  */
 /*  */

@@ -11,13 +11,12 @@ $(document).ready(function() {
 	//commenting it out for development purposes. 
 	$(window).on('beforeunload', function(){
 		location.reload();
-		document.body.scrollTop = document.documentElement.scrollTop = 0;
+		// document.body.scrollTop = document.documentElement.scrollTop = 0;
+
 		// $(window).scrollTop(0);
 	 	//   $('body').scrollTop('0'); //For Chrome, Safari and Opera
 		// document.documentElement.scrollTop = 0; // For IE and Firefox
 	}); 
-   
-	
 
  	$('.back-to-top').click(function(e) {
  		scrollToFast('header');
@@ -79,7 +78,6 @@ $(document).ready(function() {
 		});//hover	
 	});
 	
-	var panelClick = true;
 	// $(".panel-group").on('click', 'h4' ,function() {
 	// 	// $(this).find('i:not(.hidden)').toggleClass('hidden');
 	// 	//changes fa icon from plus to minus and back
@@ -99,7 +97,7 @@ $(document).ready(function() {
 	$('.panel-group .panel').on('click', '.panel-title' , function() {
 		//console.log($('.panel-group .panel').not($(this)));
 		$('.panel-group .panel').not($(this)).find('.collapse.in').collapse('toggle');
-		console.log($('.panel-group .panel').not($(this)).next());
+		//console.log($('.panel-group .panel').not($(this)).next());
 	});
 	
 	$("#section2").data('animated', false);
