@@ -18,6 +18,7 @@ html, body {
 }
 
 .work-spinner {
+  text-align: center;
   background-color: rgba(0,0,0,0);
   border: 9px solid rgba(27,61,226,0.9);
   opacity: .9;

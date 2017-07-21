@@ -48,15 +48,15 @@ $(document).ready(function() {
 		}
 
 
-		if (clickover.attr('href') === '#whoWeAre') {
+		if (clickover.attr('href') === '#section1') {
 			scrollTo('section1');
-		} else if (clickover.attr('href') === '#whatWeDo') {
+		} else if (clickover.attr('href') === '#section2') {
 			scrollTo('section2');
-		} else if (clickover.attr('href') === '#whyChooseUs') {
+		} else if (clickover.attr('href') === '#section3') {
 			scrollTo('section3');
-		} else if (clickover.attr('href') === '#ourteam') {
+		} else if (clickover.attr('href') === '#section4') {
 			scrollTo('section4');
-		} else if (clickover.attr('href') === '#contactUs') {
+		} else if (clickover.attr('href') === '#section5') {
 			scrollTo('section5');
 		}
 
