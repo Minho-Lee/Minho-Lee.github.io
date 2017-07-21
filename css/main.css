@@ -4,24 +4,28 @@
 html, body {
 	font-family: 'Montserrat', sans-serif;
 }
-body{
-  position: relative;
+@font-face {
+  font-family: 'Campton-bold';
+  src: url(../fonts/Campton-BoldDEMO.otf);
 }
-
-#work-in-progress {
+@font-face {
+  font-family: 'Campton-light';
+  src: url(../fonts/Campton-LightDEMO.otf);
+}
+#spinner-id {
   position: fixed;
   width: 100%;
   height: 100%;
   font-size: 150px;
-  text-align: center;
-  vertical-align: middle;
+  /*text-align: center;*/
+  /*vertical-align: middle;*/
   color: #000000;
   z-index: 200000;
   background-color: #FFFFFF;
 }
 
 .work-spinner {
-  text-align: center;
+  margin: 0 auto;
   background-color: rgba(0,0,0,0);
   border: 9px solid rgba(27,61,226,0.9);
   opacity: .9;
@@ -31,7 +35,6 @@ body{
   box-shadow: 0 0 35px #1B3DE2;
   width: 100px;
   height: 100px;
-  margin: 0 auto;
   -moz-animation: spin .5s infinite linear;
   -webkit-animation: spin .5s infinite linear;
   -o-animation: spin .5s infinite linear;
@@ -544,8 +547,38 @@ img.img-default {
   font-family: 'Open-Sans', sans-serif;
   font-size: 1.2em;
 }
+.modal .modal-content {
 
-
+}
+.modal .modal-info{
+  padding : 0;
+}
+.modal .close {
+  margin: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #333;
+  color: #d6d068;
+  opacity: .3;
+  height: 40px;
+  width: 40px;
+  font-size: 2em;
+  line-height: 1em;
+  outline: none;
+  z-index: 10;
+  border-bottom-left-radius: 10px;
+}
+.modal figure {
+  margin: 0;
+}
+.modal .modal-person-info {
+  font-family: "Campton-bold";
+}
+.modal .modal-body-info{
+  font-family: "Campton-light";
+  font-size: 1.1em;
+}
 
 /*  */
 /*  */

@@ -1,6 +1,6 @@
 //loading circle
 $(window).bind("load", function () {
-    $('#work-in-progress').fadeOut(100);
+    $('#spinner-id').fadeOut(100);
 });
 
 
@@ -41,7 +41,7 @@ $(document).ready(function() {
 
 	      // Store hash
 	      var hash = this.hash;
-	      console.log(hash);
+	      // console.log(hash);
 	      // Using jQuery's animate() method to add smooth page scroll
 	      $('html, body').animate({
 	        scrollTop: $(hash).offset().top - 49
