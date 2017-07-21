@@ -122,9 +122,6 @@ $(document).ready(function() {
 		//console.log($('.panel-group .panel').not($(this)).next());
 	});
 	
-	$("#section2").data('animated', false);
-
-	
 	$('.modal .skills').find('div').each(function() {
 		var randNum = Math.floor(Math.random() * 60) + 40;
 		$(this).html('').circliful({
@@ -137,19 +134,35 @@ $(document).ready(function() {
 			foregroundColor: '#00d664'
 		});
 	});	
-	
+
 });//document.ready
 
 $(window).scroll(function() {
 	//console.log($(window).scrollTop() + ' / ' + ($("#section1").offset().top + $("#section1").height()));
 	//console.log($(window).height() + $(window).scrollTop());
-	if (($(window).scrollTop() + $(window).height() > $("#section1").height()+ 50) &&
-		 $("#section2").data('animated') === false) {
-			$("#section2 .insert-animation-left").addClass('slideInLeft');
-			$("#section2 .insert-animation-right").addClass('slideInRight');
-			$("#section2").data('animated', true);
+	$("#myNavbar").on('activate.bs.scrollspy', function() {
+		var hash = $(this).find('li.active a').attr('href');
+		//adding the if statment in order to only trigger the animation once per hash
+		if ($(hash).data('animated') === false || $(hash).data('animated') == null) {
+			console.log($(hash).data('animated'));
+			$('body').find(hash).find('.insert-slideInLeft').removeClass('invisible').addClass('slideInLeft');
+			$('body').find(hash).find('.insert-slideInRight').removeClass('invisible').addClass('slideInRight');
+			$('body').find(hash).find('.insert-fadeInLeft').removeClass('invisible').addClass('fadeInLeft');
+			$('body').find(hash).find('.insert-fadeInRight').removeClass('invisible').addClass('fadeInRight');
+			$('body').find(hash).find('.insert-fadeInUp').removeClass('invisible').addClass('fadeInUp');
+			$('body').find(hash).find('.insert-fadeInDown').removeClass('invisible').addClass('fadeInDown');
+			$('body').find(hash).find('.insert-bounceInLeft').removeClass('invisible').addClass('bounceInLeft');
+			$('body').find(hash).find('.insert-bounceInRight').removeClass('invisible').addClass('bounceInRight');
+			$(hash).data('animated', true);
 		}
-})
+		// if (($(window).scrollTop() + $(window).height() > $("#section1").height()+ 50) &&
+		//  $("#section2").data('animated') === false) {
+		// 	$("#section2 .insert-animation-left").addClass('fadeInLeft');
+		// 	$("#section2 .insert-animation-right").addClass('fadeInRight');
+		// 	$("#section2").data('animated', true);
+		// }
+	});
+});//window.scroll
 
 //scrolls to the given id's position
 var scrollTo = function(id) {

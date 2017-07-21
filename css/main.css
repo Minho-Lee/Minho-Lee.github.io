@@ -179,7 +179,12 @@ html, body {
 .float-initial {
   float: initial;
 }
-
+.short-delay{
+  animation-delay: 0.5s;
+}
+.medium-delay{
+  animation-delay: 0.8s;
+}
 /************************************************/
 /* First Chunk */
 
@@ -324,6 +329,8 @@ header .active {
 
 /************************************************/
 /* Second Chunk */
+#section2 {
+}
 .about-us {
   background: url("../img/about-us-bg.jpg") no-repeat center fixed;
   background-size: cover;
@@ -511,8 +518,8 @@ img.img-default {
 }
 
 #team .team-member {
-  animation-duration: 1.5s;
-  animation-delay: 1s;
+  animation-duration: 1.3s;
+  animation-delay: 0.5s;
   border: 1px solid #ea685b;
   width: 220px;
   height: 300px;
