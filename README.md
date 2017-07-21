@@ -14,3 +14,4 @@ Building a frontend webpage
 
 [Hover.css](http://ianlunn.github.io/Hover/)
 
+[Circliful](https://github.com/pguso/jquery-plugin-circliful)

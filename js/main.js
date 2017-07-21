@@ -123,6 +123,21 @@ $(document).ready(function() {
 	});
 	
 	$("#section2").data('animated', false);
+
+	
+	$('.modal .skills').find('div').each(function() {
+		var randNum = Math.floor(Math.random() * 60) + 40;
+		$(this).html('').circliful({
+			percent: randNum,
+			textColor: 'black',
+			textY: 200,
+			textStyle: "font-size : 1.5em",
+			foregroundBorderWidth: 19,
+			backgroundBorderWidth: 20,
+			foregroundColor: '#00d664'
+		});
+	});	
+	
 });//document.ready
 
 $(window).scroll(function() {
