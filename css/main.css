@@ -4,6 +4,9 @@
 html, body {
 	font-family: 'Montserrat', sans-serif;
 }
+body{
+  position: relative;
+}
 
 #work-in-progress {
   position: fixed;

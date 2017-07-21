@@ -33,7 +33,7 @@ $(document).ready(function() {
     });
 
 	// Add smooth scrolling on all links inside the navbar
- 	$("#myNavbar a").on('click', function(event) {
+ 	$("#myNavbar a, #post-carousel a, #myCarousel a").on('click', function(event) {
    	// Make sure this.hash has a value before overriding default behavior
    	if (this.hash !== "") {
 	      // Prevent default anchor click behavior
@@ -41,17 +41,17 @@ $(document).ready(function() {
 
 	      // Store hash
 	      var hash = this.hash;
-
+	      console.log(hash);
 	      // Using jQuery's animate() method to add smooth page scroll
-	      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
 	      $('html, body').animate({
-	        scrollTop: $(hash).offset().top
+	        scrollTop: $(hash).offset().top - 49
 	      	}, 1000, function(){
 	        		// Add hash (#) to URL when done scrolling (default click behavior)
 	        		window.location.hash = hash;
 	      	});
     	};// End if
   	});
+  	
 
 	//on mobile device, when menu is minimized, clicking anywhere else closes the menu
 	$(document).click(function(event) {
@@ -68,6 +68,7 @@ $(document).ready(function() {
 		if (!clickover.hasClass('navbar-collapse') && _opened) {
 			navMain.collapse('hide');
 		}
+		
 
 
 		// if (clickover.attr('href') === '#section1') {
