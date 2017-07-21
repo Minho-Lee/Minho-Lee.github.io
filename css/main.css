@@ -121,6 +121,12 @@ html, body {
 .margin-bottom-large {
   margin-bottom: 90px;
 }
+.margin-left-large {
+  margin-left: 90px;
+}
+.margin-right-large {
+  margin-right: 90px;
+}
 .margin-top-medium {
   margin-top: 40px;
 }
@@ -187,6 +193,7 @@ html, body {
 }
 /************************************************/
 /* First Chunk */
+/* Carousel */
 
 .carousel-inner .overlay {
     position: absolute;
@@ -329,6 +336,7 @@ header .active {
 
 /************************************************/
 /* Second Chunk */
+/* About Us */
 #section2 {
 }
 .about-us {
@@ -344,15 +352,14 @@ header .active {
 .content {
     padding: 5em;
 }
-
 .title:after {
-    content: '';
-    display: block;
-    border-bottom: 0.2em solid red;
-    /*padding-bottom: 0.5em;*/
-    margin-bottom: 1em;
-    width: 8em;
-    margin-left: 0.5em;
+  content: '';
+  display: block;
+  border-bottom: 0.2em solid red;
+  /*padding-bottom: 0.5em;*/
+  margin-bottom: 1em;
+  width: 8em;
+  margin-left: 0.5em;
 }
 
 .content p {
@@ -392,6 +399,7 @@ header .active {
 
 /************************************************/
 /* Third Chunk */
+/* Icons */
 #section3 {
     background-color: #00d664;
     padding-bottom: 4em;
@@ -506,6 +514,7 @@ img.img-default {
 
 /************************************************/
 /* Fourth Section */
+/* Our Team */
 #section4 {
   background: url("../img/background.jpg") no-repeat center fixed;
   background-size: cover;
@@ -591,8 +600,18 @@ img.img-default {
   width: 120px;
 }
 
-/*  */
-/*  */
+/**********************************/
+/* Fifth Section*/
+/* Portfolio */
+#section5 .description h3{
+  font-size: 1.6em;
+}
+#section5 .description p {
+  font-size: 1.1em;
+}
+
+
+
 /*  */
 /*  */
 /*  */
