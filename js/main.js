@@ -31,6 +31,28 @@ $(document).ready(function() {
 			$parent.addClass('active');
 		}
     });
+
+	// Add smooth scrolling on all links inside the navbar
+ 	$("#myNavbar a").on('click', function(event) {
+   	// Make sure this.hash has a value before overriding default behavior
+   	if (this.hash !== "") {
+	      // Prevent default anchor click behavior
+	      event.preventDefault();
+
+	      // Store hash
+	      var hash = this.hash;
+
+	      // Using jQuery's animate() method to add smooth page scroll
+	      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+	      $('html, body').animate({
+	        scrollTop: $(hash).offset().top
+	      	}, 1000, function(){
+	        		// Add hash (#) to URL when done scrolling (default click behavior)
+	        		window.location.hash = hash;
+	      	});
+    	};// End if
+  	});
+
 	//on mobile device, when menu is minimized, clicking anywhere else closes the menu
 	$(document).click(function(event) {
 		var clickover = $(event.target),
@@ -48,17 +70,17 @@ $(document).ready(function() {
 		}
 
 
-		if (clickover.attr('href') === '#section1') {
-			scrollTo('section1');
-		} else if (clickover.attr('href') === '#section2') {
-			scrollTo('section2');
-		} else if (clickover.attr('href') === '#section3') {
-			scrollTo('section3');
-		} else if (clickover.attr('href') === '#section4') {
-			scrollTo('section4');
-		} else if (clickover.attr('href') === '#section5') {
-			scrollTo('section5');
-		}
+		// if (clickover.attr('href') === '#section1') {
+		// 	scrollTo('section1');
+		// } else if (clickover.attr('href') === '#section2') {
+		// 	scrollTo('section2');
+		// } else if (clickover.attr('href') === '#section3') {
+		// 	scrollTo('section3');
+		// } else if (clickover.attr('href') === '#section4') {
+		// 	scrollTo('section4');
+		// } else if (clickover.attr('href') === '#section5') {
+		// 	scrollTo('section5');
+		// }
 
 		//event.preventDefault();
 	});//document.click
