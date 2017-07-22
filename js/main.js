@@ -53,7 +53,7 @@ $(document).ready(function() {
   	});
   	
 
-	//on mobile device, when menu is minimized, clicking anywhere else closes the menu
+	//on mobile device or small browser, when menu is minimized, clicking anywhere else closes the menu
 	$(document).click(function(event) {
 		var clickover = $(event.target),
 		 	_opened = $('.navbar-collapse').hasClass('in'),
@@ -69,8 +69,6 @@ $(document).ready(function() {
 			navMain.collapse('hide');
 		}
 		
-
-
 		// if (clickover.attr('href') === '#section1') {
 		// 	scrollTo('section1');
 		// } else if (clickover.attr('href') === '#section2') {
@@ -122,6 +120,8 @@ $(document).ready(function() {
 		//console.log($('.panel-group .panel').not($(this)).next());
 	});
 	
+	//randomly assigns a percentage of skills for each team member from 40~99
+	//and using circliful, makes it into a circle percentage display
 	$('.modal .skills').find('div').each(function() {
 		var randNum = Math.floor(Math.random() * 60) + 40;
 		$(this).html('').circliful({
@@ -133,10 +133,19 @@ $(document).ready(function() {
 			backgroundBorderWidth: 20,
 			foregroundColor: '#00d664'
 		});
-	});	
+	});
+
+	/* Toggling active classes in filters under portfolio*/
+	$(".filters ul").find('a').on('click', function() {
+		$('.filters ul').find('a.active').removeClass('active');
+		$(this).addClass('active');
+	});
 
 });//document.ready
 
+
+//using bootstrap's scrollspy, keeps track of where the user is and navbar is updated accordingly
+//adds in animation according to the scroll position
 $(window).scroll(function() {
 	//console.log($(window).scrollTop() + ' / ' + ($("#section1").offset().top + $("#section1").height()));
 	//console.log($(window).height() + $(window).scrollTop());
@@ -144,7 +153,6 @@ $(window).scroll(function() {
 		var hash = $(this).find('li.active a').attr('href');
 		//adding the if statment in order to only trigger the animation once per hash
 		if ($(hash).data('animated') === false || $(hash).data('animated') == null) {
-			console.log($(hash).data('animated'));
 			$('body').find(hash).find('.insert-slideInLeft').removeClass('invisible').addClass('slideInLeft');
 			$('body').find(hash).find('.insert-slideInRight').removeClass('invisible').addClass('slideInRight');
 			$('body').find(hash).find('.insert-fadeInLeft').removeClass('invisible').addClass('fadeInLeft');
@@ -170,7 +178,7 @@ var scrollTo = function(id) {
                   scrollTop: $("#" + id).offset().top-50
                }, 1000);
 }
-
+//scrolls to given id's position fast
 var scrollToFast = function(id) {
    $('html, body').animate({
                   scrollTop: $("#" + id).offset().top-50
