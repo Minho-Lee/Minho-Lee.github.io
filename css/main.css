@@ -634,8 +634,8 @@ img.img-default {
   position:relative;
   display: block;
 }
-.portfolio-item img{
-  
+.portfolio-item img {
+  width: 100%;
 }
 /*  */
 /*  */

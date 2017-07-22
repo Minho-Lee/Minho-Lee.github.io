@@ -5,7 +5,7 @@ $(window).bind("load", function () {
 
 
 $(document).ready(function() {
-
+	'use strict';
 	//when refreshed, scroll back to the top automatically
 	//commenting it out for development purposes. 
 	$(window).on('beforeunload', function(){
@@ -135,22 +135,10 @@ $(document).ready(function() {
 		});
 	});
 
-	/* Toggling active classes in filters under portfolio*/
-	$(".filters ul").find('a').on('click', function() {
-		$('.filters ul').find('a.active').removeClass('active');
-		$(this).addClass('active');
-	});
-
-	/* Activating Nivo-lightbox*/
-	$("#section5 .portfolio").find('a').nivoLightbox({
-		effect: 'slideDown',
-		errorMessage: 'The requested content cannot be loaded. Please try again later.'
-	});
-
 	/* ISOTOPE- arranging photos in portfolio section*/
-	var container = $(".portfolio-wrapper");
+	var $container = $(".portfolio-wrapper");
 
-	container.isotope({
+	$container.isotope({
 		itemSelector: '.portfolio-item',
 		animationEngine: 'best-available',
       animationOptions: {
@@ -159,6 +147,67 @@ $(document).ready(function() {
       },
 		layoutMode: 'fitRows'
 	});
+
+	// Split columns for different size layout (fits bootstrap sizes)
+  function splitColumns() {
+      var windowWidth = $(window).width(),
+      columnNumber = 1; //  default column number
+      if (windowWidth > 1200) {
+          columnNumber = 4;
+      } else if (windowWidth > 767) {
+          columnNumber = 3;
+      } else if (windowWidth > 600) {
+          columnNumber = 2;
+      }
+      return columnNumber;
+  }
+
+  // Set width for portfolio item (so it spans out to the browser fully as browser resizes)
+  	function setColumns() {
+    	var windowWidth = $(window).width(),
+      	columnNumber = splitColumns(),
+        	postWidth = Math.floor(windowWidth / columnNumber);
+
+   	$container.find('.portfolio-item').each(function() {
+        	$(this).css({
+      	   width: postWidth + 'px'
+        	});
+    	});
+  	}
+  	// initialize isotope
+  	function initIsotope() {
+		setColumns();
+		//option: layout -> when all items need to be laid out without filtering/sorting
+		$container.isotope('layout');
+  	}
+  	//when window resizes, reinitialize isotope
+  	$(window).bind('resize', function() {
+  		initIsotope();
+  	});
+  	initIsotope();
+
+	/* Toggling active classes in filters under portfolio*/
+	/* Also toggling filtering of isotope images underneath */
+	$(".filters ul").find('a').on('click', function() {
+		$('.filters ul').find('a.active').removeClass('active');
+		$(this).addClass('active');
+		//Simplified:
+		/* $(".filters ul a").removeClass('active');
+		$(this).addClass('active'); */
+		var filterVal = $(this).attr('data-filter');
+		$container.isotope({
+			filter: filterVal
+		});
+		initIsotope();
+	});
+
+	/* Activating Nivo-lightbox*/
+	$("#section5 .portfolio").find('a').nivoLightbox({
+		effect: 'slideDown',
+		errorMessage: 'The requested content cannot be loaded. Please try again later.'
+	});
+
+	
 });//document.ready
 
 
