@@ -146,6 +146,19 @@ $(document).ready(function() {
 		effect: 'slideDown',
 		errorMessage: 'The requested content cannot be loaded. Please try again later.'
 	});
+
+	/* ISOTOPE- arranging photos in portfolio section*/
+	var container = $(".portfolio-wrapper");
+
+	container.isotope({
+		itemSelector: '.portfolio-item',
+		animationEngine: 'best-available',
+      animationOptions: {
+          duration: 500,
+          queue: false
+      },
+		layoutMode: 'fitRows'
+	});
 });//document.ready
 
 
