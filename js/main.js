@@ -141,6 +141,11 @@ $(document).ready(function() {
 		$(this).addClass('active');
 	});
 
+	/* Activating Nivo-lightbox*/
+	$("#section5 .portfolio").find('a').nivoLightbox({
+		effect: 'slideDown',
+		errorMessage: 'The requested content cannot be loaded. Please try again later.'
+	});
 });//document.ready
 
 

@@ -21,6 +21,8 @@
 		<link rel="stylesheet" href="css/hover.css">
 		<link rel="stylesheet" href="css/jquery-ui.min.css">
 		<link rel="stylesheet" type="text/css" href="css/jquery.circliful.css">
+		<link rel="stylesheet" href="css/nivo-lightbox.css">
+    	<link rel="stylesheet" href="css/nivo-lightbox-default.css">
 		<link rel="stylesheet" href="css/main.css"/>
 	</head>
 	<body data-spy="scroll" data-target=".navbar" data-offset='50'>
@@ -541,7 +543,7 @@
 		</div><!--section4-->
 
 		<!-- Portfolio -->
-		<div id="section5" class="portfolio" style="height:500px">
+		<div id="section5">
 			<div class="container">
 				<div class="title">
 					<h1>Our Portfolio</h1>
@@ -581,10 +583,26 @@
 						</li>
 					</ul>
 				</div><!--filters-->
-
-			</div>
+			</div><!--container end-->
+			<div class="container-fluid portfolio-overlay">
+				<div class="portfolio-item print">
+					<div class="portfolio">
+						<a href="img/portfolio/portfolio-1.jpg" data-lightbox-gallery="mygallery">
+							<img src="img/portfolio/portfolio-1.jpg" alt="portfolio-1"/>
+						</a>
+					</div>
+				</div><!--portfolio-item-->
 			
-		</div>
+				<div class="portfolio-item photography">
+					<div class="portfolio">
+						<a href="img/portfolio/portfolio-2.jpg" data-lightbox-gallery="mygallery">
+							<img src="img/portfolio/portfolio-2.jpg" alt="portfolio-2"/>
+						</a>
+					</div>
+				</div><!--portfolio-item-->
+
+			</div><!--container-fluid-->
+		</div><!--section5-->
 		<div id='section6' class="container-fluid" style="height:500px">
 			<h1>INSERT CONTACT US</h1>
 		</div>
@@ -595,13 +613,16 @@
 
 
 		<!-- Latest compiled Jquery JavaScript -->
-		<script src="js/jquery-3.2.1.min.js"></script>
+		<!-- <script src="js/jquery-3.2.1.min.js"></script> -->
+		<!-- Nivo-lightbox is outdated so it doesn't work with jquery3.2.1. Temporarily using 1.12.4 -->
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 		<!-- <script src="https://code.jquery.com/jquery-migrate-3.0.0.js"></script> -->
 		<script type="text/javascript" src="js/jquery.circliful.min.js"></script>
 		<script src="js/jquery-ui.min.js"></script>
 		<!-- Latest compiled and minified Bootstrap JavaScript -->
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<script src="js/tooltipster.bundle.min.js"></script>
+		<script src="js/nivo-lightbox.min.js"></script>
 		<script src="js/main.js"></script>
 	</body>
 </html>

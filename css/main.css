@@ -609,12 +609,12 @@ img.img-default {
 #section5 .description p {
   font-size: 1.1em;
 }
-.portfolio .filters {
+#section5 .filters {
   color: #9e9e9e;
   font-size: 1.2em;
   font-family: "Open-Sans", sans-serif;
 }
-.portfolio .filters li {
+#section5 .filters li {
   display: inline;
 }
 .filters a:hover, .filters a:visited,
@@ -625,8 +625,18 @@ img.img-default {
 .filters a.active {
   color: #e74c3c;
 }
-
-
+.portfolio .portfolio-item{
+  width: 25%;
+  padding: 0;
+  margin: 0;
+}
+.portfolio-item a {
+  position:relative;
+  display: block;
+}
+.portfolio-item img{
+  
+}
 /*  */
 /*  */
 /*  */
