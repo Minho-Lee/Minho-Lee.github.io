@@ -634,6 +634,7 @@ img.img-default {
   position:relative;
   display: block;
   font-family: "Open-Sans", sans-serif;
+  overflow: hidden;
 }
 .portfolio-item img {
   width: 100%;
@@ -641,10 +642,10 @@ img.img-default {
 .hvr-rectangle-out {
   backface-visibility: hidden;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  background: inherit;
 }
 .hvr-rectangle-out:before {
   background: rgba(231, 76, 60, 0.9);
-  
 }
 .portfolio .portfolio-overlay {
   opacity: 0;
@@ -659,14 +660,22 @@ img.img-default {
 }
 
 .portfolio a button{
-  padding: 10px;
+  padding: 20px 45px;
+  border-radius : 5px;
+  font-size: 1.2em;
   background-color: transparent;
   outline: none;
   border: 3px solid white;
   text-transform: uppercase;
 }
+.portfolio a button:after {
+
+}
 .portfolio a img {
   transition: all 1.0s linear;
+}
+.portfolio a h4{
+  font-size: 3em;
 }
 .portfolio a:hover > .portfolio-overlay{
   opacity: 1;
