@@ -465,7 +465,6 @@ img.img-default {
 .icon-section:hover h4{
     color: black;
 }
-
 .icon-section .options {
     opacity: 0;
     color: gray;
@@ -654,12 +653,13 @@ img.img-default {
   left: 0;
   width: 100%;
   height: 100%;
-  
   padding-top: 40%; 
   transition: all 0.5s ease-in-out;
+  z-index: 4;
 }
 
 .portfolio a button{
+  position: relative;
   padding: 20px 45px;
   border-radius : 5px;
   font-size: 1.2em;
@@ -667,9 +667,39 @@ img.img-default {
   outline: none;
   border: 3px solid white;
   text-transform: uppercase;
+  z-index: 10;
+  overflow: hidden;
 }
 .portfolio a button:after {
-
+  content: '';
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  transition: all 0.3s;
+  border: 3px solid #fff;
+  color: #fff;
+  width: 100%;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  opacity: 0;
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+.portfolio a button:hover {
+  /*change the font color to same one as image background*/
+  color: #e74c3c;
+}
+/*NTS: order of pseudo element is crucial, :after:hover won't behave the same way because
+       it will look for the 'after' element being hovered over*/
+.portfolio a button:hover:after{
+  height: 230%;
+  opacity: 1;
 }
 .portfolio a img {
   transition: all 1.0s linear;
