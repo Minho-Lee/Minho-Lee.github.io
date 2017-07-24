@@ -660,7 +660,7 @@ img.img-default {
 
 .portfolio a button{
   position: relative;
-  padding: 20px 45px;
+  padding: 20px 50px;
   border-radius : 5px;
   font-size: 1.2em;
   background-color: transparent;
@@ -698,7 +698,7 @@ img.img-default {
 /*NTS: order of pseudo element is crucial, :after:hover won't behave the same way because
        it will look for the 'after' element being hovered over*/
 .portfolio a button:hover:after{
-  height: 230%;
+  height: 260%;
   opacity: 1;
 }
 .portfolio a img {
