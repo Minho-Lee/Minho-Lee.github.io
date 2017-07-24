@@ -217,12 +217,13 @@ $(document).ready(function() {
 			$("#insert-other").html('').hide();
 		};
 	});
-	//removing placeholder values on focus
-	$(".service-info #insert-other input").focus(function() {
-		$(this).removeAttr('placeholder');
-	}).blur(function() {
-
+	
+	//toggles radio button fonts to blue and black as they are selected
+	$(".service-info .radio-options").change(function() {
+		$('.service-info .radio-options span').css('color', 'black');
+		$(this).find(':checked').next().css('color', '#428bca');
 	})
+	
 	
 	
 });//document.ready

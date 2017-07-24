@@ -750,7 +750,8 @@ img.img-default {
 }
 #contactform input[type="text"],
 #contactform input[type='email'],
-.service-info select {
+.service-info select,
+.service-info textarea {
   border: none;
   border-bottom: 2px solid gray;
   width: 90%;
@@ -761,7 +762,8 @@ img.img-default {
   transition: all 0.5s;
 }
 #contactform input:focus,
-.service-info select:focus{
+.service-info select:focus,
+.service-info textarea:focus{
   outline: none;
   border-bottom: 2px solid #428bca;
   color: #428bca;
@@ -773,6 +775,9 @@ img.img-default {
 }
 #contactform .contact-info label:after {
   content: "*";
+}
+#contactform .contact-info label#lastchild:after {
+  content: "";
 }
 #contactform .service-info {
   color: black;
@@ -801,20 +806,33 @@ img.img-default {
 }
 .service-info #insert-other input{
   margin-top: 20px;
-  width: 80%;
+  width: 360px;
   padding-left: 20px;
 }
-
+.service-info textarea {
+  width: 75%;
+  height: 200px;
+  padding-top: 20px;
+}
+.service-info textarea:focus {
+  border-bottom-right-radius: 0;
+}
 #contactform button {
   text-transform: uppercase;
   background: #9855d4;
   color: #fff;
+  font-size: 1.1em;
   border: none;
+  width: 20%;
+  padding: 20px;
 }
 #contactform button:hover:before{
   border-radius: 4px;
 }
 
+#random {
+  color: initial;
+}
 
 
 /*  */

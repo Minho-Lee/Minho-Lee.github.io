@@ -710,7 +710,7 @@
 						<h2><font color='#9855d4'>Contact Us Today</font></h2>
 					</div><!--row-->
 
-					<form id="contactform" class="margin-top-medium">
+					<form id="contactform" class="margin-top-medium" onsubmit="return false">
 						<div class="contact-info">
 							<div class="row">
 								<div class="col-md-6 col-sm-6 col-xs-12">
@@ -738,8 +738,8 @@
 									<input type="email" name="email" required/>
 								</div>
 								<div class='col-md-6 col-sm-6 col-xs-12'>
-									<label>Personal Link(Github, linkedIn, etc)</label><br/>
-									<input type="text" name="links" required/>
+									<label id="lastchild">Personal Link(Github, linkedIn, etc)</label><br/>
+									<input type="text" name="links"/>
 								</div>
 							</div>
 						</div>
@@ -813,14 +813,29 @@
 								</select>
 							</div><!--row-->
 							<span class='margin-left-small' id="insert-other"></span>
+
+							<div class="row margin-top-small">
+								<label class="margin-left-small">Please include any comments here</label><br/>
+								<textarea class="margin-left-small" name='comments' value='comments'></textarea>
+							</div><!--row-->
+
+							<div class="row margin-top-small">
+								<label class="margin-left-small">Interested in our blog?</label><br/>
+								<div class="radio-options margin-left-medium">
+									<input type="radio" name="interestlevel" value='1'/> <span>Extremely</span><br/>
+									<input type="radio" name="interestlevel" value='2'/> <span>Quite so</span><br/>
+									<input type="radio" name="interestlevel" value='3'/> <span>Somewhat</span><br/>
+									<input type="radio" name="interestlevel" value='4'/> <span>Not really</span><br/>
+									<input type="radio" name="interestlevel" value='5'/> <span>Boo</span><br/>
+								</div>
+							</div>
 						</div><!--service-info-->
 
-						<button type='submit' class="btn hvr-sweep-to-top margin-top-large">Talk to a Human</button>
+						<button type='submit' class="btn hvr-sweep-to-top margin-top-medium">Talk to a Human</button>
 					</form>
-					<div class="margin-top-large">placeholder</div>
 				</div><!--container-->
 
-
+				<h1 id='random'>INSERT GOOGLE MAP HERE</h1>
 			</div><!--contact-us-->
 
 		</div>
