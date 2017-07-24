@@ -669,8 +669,8 @@ img.img-default {
   font-size: 1.2em;
   background-color: Transparent;
   outline: none;
-  /*border: 3px solid white;*/
-  border:none;
+  border: 3px solid white;
+  /*border:none;*/
   text-transform: uppercase;
   z-index: 10;
   overflow: hidden;
