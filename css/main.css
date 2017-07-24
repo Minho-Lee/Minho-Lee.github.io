@@ -12,6 +12,10 @@ html, body {
   font-family: 'Campton-light';
   src: url(../fonts/Campton-LightDEMO.otf);
 }
+@font-face {
+  font-family: 'Plex-regular';
+  src: url('../fonts/Opentype/IBMPlexSans-Regular-V01.1.otf');
+}
 #spinner-id {
   position: fixed;
   width: 100%;
@@ -195,6 +199,7 @@ html, body {
 .medium-delay{
   animation-delay: 0.8s;
 }
+
 /************************************************/
 /* First Chunk */
 /* Carousel */
@@ -721,35 +726,90 @@ img.img-default {
   transform: scale(1.22);
 }
 
-
+/******************************/
 /* Sixth Section  */
-/*  Contact US*/
-#section6{
-  background: url(https://www.netguru.co/hubfs/images/shared/contact_map.png?t=1499332973978) center;
-  background-repeat: no-repeat;
-  height: 500px;
+/*  Contact Us*/
+#section6 {
+  position: relative;
+  background: url(../img/contact-us.jpeg) center no-repeat fixed;
   background-size: cover;
-  background-color: #00d664;
+  font-family: 'Plex-regular';
 }
-#section6 .title h1 {
-  margin-left: 90px;
+#section6 .background-overlay{
+  background: rgba(238, 238, 238, 0.3);
+  height: 100%;
+  color: white;
 }
-#section6 .title:after {
-  margin-left: inherit;
+#section6 .background-overlay h1{
+  font-size: 4em;
+}
+#section6 .background-overlay h4{
+  font-size: 2em;
+  margin: 0 150px;
+  line-height: 120%;
+}
+#contactform input[type="text"],
+#contactform input[type='email'] {
+  border: none;
+  border-bottom: 2px solid gray;
+  width: 90%;
+  background-color: #f4f4f4;
+  height: 50px;
+  padding-left: 20px;
+  color: gray;
+  transition: all 0.5s;
+}
+#contactform input:focus{
+  outline: none;
+  border-bottom: 2px solid #428bca;
+  color: #428bca;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+#contactform .contact-info label {
+  font-size: 1.4em;
+}
+#contactform .contact-info label:after {
+  content: "*";
+}
+#contactform .service-info {
+  color: black;
+  font-size: 1.2em;
+}
+.service-info label input {
+  display:none;
+}
+.service-info label span {
+  height: 15px;
+  width: 15px;
+  top: 2.5px;
+  border: 1px solid #a9a9a9;
+  border-radius: 5px;
+  position: relative;
+  display: inline-block;
+}
+.service-info input[type='checkbox']:checked + span:before {
+  content: '\2714';
+  position: absolute;
+  top: -5px;
+  left: 0;
+}
+.service-info select {
+  width: 90%;
 }
 
 
-@media (max-width: 479px) {
-  #section6 .title h1
-  {
-    margin-left: 0;
-  }
-  #seciton6 .title:after {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-  }
+#contactform button {
+  text-transform: uppercase;
+  background: #9855d4;
+  color: #fff;
+  border: none;
 }
+#contactform button:hover:before{
+  border-radius: 4px;
+}
+
+
 
 /*  */
 /*  */
