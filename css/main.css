@@ -347,11 +347,9 @@ header .active {
   background-size: cover;
   position: relative;
 }
-
 .about-us .overlay {
   background: rgba(238, 238, 238, 0.95);
 }
-
 .content {
     padding: 5em;
 }
@@ -379,17 +377,22 @@ header .active {
 }
 
 @media only screen and (max-width: 479px) {
-    .title:after{
-        position: relative;
-        margin-left: auto;
-        margin-right:auto;
-    }
-    h1 {
-        text-align: center;
-    }
-    .content p {
-        font-size: 1.7em;
-    }
+  .title {
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .title:after{
+      position: relative;
+      margin-left: auto;
+      margin-right:auto;
+  }
+  .title h1 {
+    text-align: center;
+    margin-left: 0;
+  }
+  .content p {
+      font-size: 1.7em;
+  }
 }
 
 @media (max-width: 991px) {
@@ -713,8 +716,37 @@ img.img-default {
 .portfolio a:hover > img {
   transform: scale(1.22);
 }
-/*  */
-/*  */
+
+
+/* Sixth Section  */
+/*  Contact US*/
+#section6{
+  background: url(https://www.netguru.co/hubfs/images/shared/contact_map.png?t=1499332973978) center;
+  background-repeat: no-repeat;
+  height: 500px;
+  background-size: cover;
+  background-color: #00d664;
+}
+#section6 .title h1 {
+  margin-left: 90px;
+}
+#section6 .title:after {
+  margin-left: inherit;
+}
+
+
+@media (max-width: 479px) {
+  #section6 .title h1
+  {
+    margin-left: 0;
+  }
+  #seciton6 .title:after {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 /*  */
 /*  */
 /*  */
