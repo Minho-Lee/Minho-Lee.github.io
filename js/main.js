@@ -207,6 +207,23 @@ $(document).ready(function() {
 		errorMessage: 'The requested content cannot be loaded. Please try again later.'
 	});
 
+	/*Contact us section*/
+	//using change() over click() in this case cause click() is triggered in the intial click
+	$(".service-info select").change(function() {
+		if ($(this).find(':selected').val() === 'other') {
+			$("#insert-other").html('<label><input type="text" name="other" placeholder="Specify Here" \
+				onfocus="this.placeholder=\'\'" onblur="this.placeholder=\'Specify Here\'"/></label>').show();
+		} else {
+			$("#insert-other").html('').hide();
+		};
+	});
+	//removing placeholder values on focus
+	$(".service-info #insert-other input").focus(function() {
+		$(this).removeAttr('placeholder');
+	}).blur(function() {
+
+	})
+	
 	
 });//document.ready
 
