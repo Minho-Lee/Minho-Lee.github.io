@@ -3,19 +3,19 @@ $(window).bind("load", function () {
     $('#spinner-id').fadeOut(100);
 });
 
+//when refreshed, scroll back to the top automatically
+	//commenting it out for development purposes. 
+	$(window).on('beforeunload', function(){
+		// console.log(location);
+		document.body.scrollTop = document.documentElement.scrollTop = 0;
+		$(window).scrollTop(0);
+	 	$('body').scrollTop('0'); //For Chrome, Safari and Opera
+	 	location.reload();
+	}); 
 
 $(document).ready(function() {
 	'use strict';
-	//when refreshed, scroll back to the top automatically
-	//commenting it out for development purposes. 
-	$(window).on('beforeunload', function(){
-		location.reload();
-		document.body.scrollTop = document.documentElement.scrollTop = 0;
-
-		// $(window).scrollTop(0);
-	 	//   $('body').scrollTop('0'); //For Chrome, Safari and Opera
-		// document.documentElement.scrollTop = 0; // For IE and Firefox
-	}); 
+	history.pushState("", document.title, window.location.pathname);
 
  	$('.back-to-top').click(function(e) {
  		scrollToFast('header');
