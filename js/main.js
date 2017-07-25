@@ -10,7 +10,7 @@ $(document).ready(function() {
 	//commenting it out for development purposes. 
 	$(window).on('beforeunload', function(){
 		location.reload();
-		// document.body.scrollTop = document.documentElement.scrollTop = 0;
+		document.body.scrollTop = document.documentElement.scrollTop = 0;
 
 		// $(window).scrollTop(0);
 	 	//   $('body').scrollTop('0'); //For Chrome, Safari and Opera
@@ -225,7 +225,6 @@ $(document).ready(function() {
 	})
 	
 	
-	
 });//document.ready
 
 
@@ -271,7 +270,54 @@ var scrollToFast = function(id) {
                {duration: 500});
 }
 
-var reset = function() {
-	$('body').scrollTop(0);
+//loading Google Maps
+var marker, map, infowindow;
+
+function initMap() {
+	//xerox building at finch
+   var uluru = {lat: 43.7800423, lng: -79.4159908};
+   map = new google.maps.Map(document.getElementById('myMap1'), {
+      zoom: 15,
+      center: uluru
+   });
+   marker = new google.maps.Marker({
+      position: uluru,
+      animation: google.maps.Animation.DROP,
+      map: map
+   });
+   marker.addListener('click', toggleBounce);
+
+   infowindow = new google.maps.InfoWindow({
+   	content: "Xerox Building"
+  	});
+   marker.addListener('click', function() {
+   	toggleInfowindow();
+   	infowindow.isOpen = true;
+   });
+
+   google.maps.event.addListener(marker, 'click', function () {
+	   map.panTo(marker.getPosition());
+	   //map.setCenter(marker.getPosition()); // sets center without animation
+	});
+   //google maps resizes as browser resizes
+	google.maps.event.addDomListener(window, "resize", function() {
+	    var center = map.getCenter();
+	    google.maps.event.trigger(map, "resize");
+	    map.setCenter(center);
+	});
+};//initMap
+
+function toggleBounce() {
+  	if (marker.getAnimation() !== null) {
+    	marker.setAnimation(null);
+  	} else {
+    	marker.setAnimation(google.maps.Animation.BOUNCE);
+    	setTimeout(function() { marker.setAnimation(null); }, 3000);
+  	}
 }
+function toggleInfowindow() {
+	infowindow.open(map, marker);
+	setTimeout(function() { infowindow.close(); }, 3000);
+}
+
 
