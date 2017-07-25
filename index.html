@@ -15,7 +15,6 @@
 		<link rel="stylesheet" href="css/animate.css">
 		<link rel="stylesheet" href="css/bootstrapValidator.css">
 		<link rel="stylesheet" href="css/normalize.min.css">
-		<link rel="stylesheet" href="css/tooltipster.bundle.min.css">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 		<link rel="stylesheet" href="css/hover.css">
@@ -238,7 +237,7 @@
 					<h4>We ship success everyday. What can we do for you?</h4>
 				</div>
 				<div class="row" id="big-icon-wrapper">
-					<div class='col-sm-4 icon-section'>
+					<div class='col-sm-4 icon-section animated invisible insert-fadeInLeft'>
 						<img class="img-default" src="https://cdn2.hubspot.net/hubfs/493098/images/ico/n_web.png"/>
 						<img class="img-hover" src="https://cdn2.hubspot.net/hubfs/493098/images/ico/n_web_hover.png" width="57px"/>
 						<h4>Web Development</h4>
@@ -251,7 +250,7 @@
 							<div role='button' class='glyphicon glyphicon-menu-right glyphicon-md'></div>
 						</div>
 					</div>
-					<div class='col-sm-4 icon-section'>
+					<div class='col-sm-4 icon-section animated invisible insert-fadeInDown'>
 						<img class="img-default" src="https://cdn2.hubspot.net/hubfs/493098/images/ico/n_mobile.png"/>
 						<img class="img-hover" src="https://cdn2.hubspot.net/hubfs/493098/images/ico/n_mobile_hover.png" width="57px"/>
 						<h4>Mobile Development</h4>
@@ -262,7 +261,7 @@
 							<div role='button' class='glyphicon glyphicon-menu-right glyphicon-md'></div>
 						</div>
 					</div>
-					<div class='col-sm-4 icon-section'>
+					<div class='col-sm-4 icon-section animated invisible insert-fadeInRight'>
 						<img class="img-default" src="https://cdn2.hubspot.net/hubfs/493098/images/ico/n_design.png"/>
 						<img class="img-hover" src="https://cdn2.hubspot.net/hubfs/493098/images/ico/n_design_hover.png" width="57px"/>
 						<h4>Product Design</h4>
@@ -547,7 +546,7 @@
 		<!-- Portfolio -->
 		<div id="section5">
 			<div class="container">
-				<div class="title margin-top-medium">
+				<div class="title margin-top-medium animated invisible insert-slideInRight">
 					<h1>Our Portfolio</h1>
 				</div>
 
@@ -707,37 +706,39 @@
 			<div id="contact-us">
 				<div class="container">
 					<div class="row">
-						<h2><font color='#9855d4'>Contact Us Today</font></h2>
+						<div class="animated invisible insert-slideInLeft">
+							<h2><font color='#9855d4'>Contact Us Today</font></h2>
+						</div>
 					</div><!--row-->
 
 					<form id="contactform" class="margin-top-medium" onsubmit="return false">
 						<div class="contact-info">
 							<div class="row">
-								<div class="col-md-6 col-sm-6 col-xs-12">
+								<div class="col-md-6 col-sm-6 col-xs-12 animated invisible insert-fadeInLeft">
 									<label>First Name</label><br/>
 									<input type='text' name='fname' required/>
 								</div>
-								<div class="col-md-6 col-sm-6 col-xs-12">
+								<div class="col-md-6 col-sm-6 col-xs-12 animated invisible insert-fadeInRight">
 									<label>Last Name</label><br/>
 									<input type="text" name="lname" required/>
 								</div>
 							</div>
 							<div class="row margin-top-medium">
-								<div class="col-md-6 col-sm-6 col-xs-12">
+								<div class="col-md-6 col-sm-6 col-xs-12 animated invisible insert-fadeInLeft">
 									<label>Company</label><br/>
 									<input type="text" name="company" required/>
 								</div>
-								<div class="col-md-6 col-sm-6 col-xs-12">
+								<div class="col-md-6 col-sm-6 col-xs-12 animated invisible insert-fadeInRight">
 									<label>Job Title</label><br/>
 									<input type="text" name="jobtitle" required/>
 								</div>
 							</div>
 							<div class='row margin-top-medium'>
-								<div class='col-md-6 col-sm-6 col-xs-12'>
+								<div class='col-md-6 col-sm-6 col-xs-12 animated invisible insert-fadeInLeft'>
 									<label>Email</label><br/>
 									<input type="email" name="email" required/>
 								</div>
-								<div class='col-md-6 col-sm-6 col-xs-12'>
+								<div class='col-md-6 col-sm-6 col-xs-12 animated invisible insert-fadeInRight'>
 									<label id="lastchild">Personal Link(Github, linkedIn, etc)</label><br/>
 									<input type="text" name="links"/>
 								</div>
@@ -745,9 +746,11 @@
 						</div>
 
 						<!-- Checklists -->
-						<h2 class="margin-top-medium"><font color='#9855d4'>Services</font></h2>
+						<h2 class="margin-top-medium animated invisible insert-fadeInLeft">
+							<font color='#9855d4'>Services</font>
+						</h2>
 
-						<div class="service-info">
+						<div class="service-info animated invisible insert-fadeInDown">
 							<div class="row">
 								<div class="col-md-3 col-sm-3 col-xs-6">
 									<label>
@@ -862,10 +865,9 @@
 		<script src="js/jquery-ui.min.js"></script>
 		<!-- Latest compiled and minified Bootstrap JavaScript -->
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
-		<script src="js/tooltipster.bundle.min.js"></script>
 		<script src="js/nivo-lightbox.min.js"></script>
 		<script src="js/isotope.pkgd.min.js"></script>
-		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaogtvJcRNheBu45WyAaFUlAhJBcXx_eo&callback=initMap"></script>
 		<script src="js/main.js"></script>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaogtvJcRNheBu45WyAaFUlAhJBcXx_eo&callback=initMap"></script>
 	</body>
 </html>
