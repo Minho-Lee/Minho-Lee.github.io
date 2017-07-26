@@ -150,16 +150,16 @@ $(document).ready(function() {
 
 	// Split columns for different size layout (fits bootstrap sizes)
   function splitColumns() {
-      var windowWidth = $(window).width(),
-      columnNumber = 1; //  default column number
-      if (windowWidth > 1200) {
-          columnNumber = 4;
-      } else if (windowWidth > 767) {
-          columnNumber = 3;
-      } else if (windowWidth > 600) {
-          columnNumber = 2;
-      }
-      return columnNumber;
+    var windowWidth = $(window).width(),
+      	columnNumber = 1; //  default column number
+    if (windowWidth > 1200) {
+    	columnNumber = 4;
+  	} else if (windowWidth > 767) {
+    	columnNumber = 3;
+  	} else if (windowWidth > 600) {
+      columnNumber = 2;
+  	}
+  	return columnNumber;
   }
 
   // Set width for portfolio item (so it spans out to the browser fully as browser resizes)
