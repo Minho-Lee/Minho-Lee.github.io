@@ -7,10 +7,10 @@ $(window).bind("load", function () {
 	//commenting it out for development purposes. 
 	$(window).on('beforeunload', function(){
 		// console.log(location);
-		document.body.scrollTop = document.documentElement.scrollTop = 0;
-		$(window).scrollTop(0);
-	 	$('body').scrollTop('0'); //For Chrome, Safari and Opera
-	 	location.reload();
+		// document.body.scrollTop = document.documentElement.scrollTop = 0;
+		// $(window).scrollTop(0);
+	 // 	$('body').scrollTop('0'); //For Chrome, Safari and Opera
+	 // 	location.reload();
 	}); 
 
 $(document).ready(function() {

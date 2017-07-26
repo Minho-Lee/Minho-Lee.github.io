@@ -1,6 +1,7 @@
 /* Author: Minho Lee*/
 /* https://github.com/minho-lee */
-/* GLOBAL */
+
+/* GLOBAL declarations*/
 html, body {
 	font-family: 'Montserrat', sans-serif;
 }
@@ -200,7 +201,7 @@ html, body {
   animation-delay: 0.8s;
 }
 
-/************************************************/
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 /* First Chunk */
 /* Carousel */
 
@@ -343,7 +344,7 @@ header .active {
     }
 }
 
-/************************************************/
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 /* Second Chunk */
 /* About Us */
 #section2 {
@@ -409,7 +410,7 @@ header .active {
   }
 }
 
-/************************************************/
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 /* Third Chunk */
 /* Icons */
 #section3 {
@@ -523,7 +524,7 @@ img.img-default {
   }
 }
 
-/************************************************/
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 /* Fourth Section */
 /* Our Team */
 #section4 {
@@ -608,7 +609,7 @@ img.img-default {
   width: 120px;
 }
 
-/**********************************/
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 /* Fifth Section*/
 /* Portfolio */
 #section5 .description h3{
@@ -729,7 +730,7 @@ img.img-default {
   transform: scale(1.22);
 }
 
-/******************************/
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 /* Sixth Section  */
 /*  Contact Us*/
 #section6 {
@@ -845,7 +846,37 @@ img.img-default {
   width: 90%;
   margin: auto;
 }
-/*  */
+
+/* footersection */
+#footersection {
+  width: 100%;
+  height: 200px;
+  background: rgb(51,51,51);
+}
+#footersection a {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  font-size: 2.5em;
+  width: 40px;
+  height: 40px;
+  text-decoration: none;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 5px;
+  margin: 0 5px;
+}
+#footersection #fb-icon{
+  padding-right: 2px;
+  padding-top:2px;
+}
+#footersection #twitter-icon{
+  padding-left: 2px;
+  padding-top: 2px;
+}
+#footersection a:hover {
+
+}
 /*  */
 /*  */
 /*  */
