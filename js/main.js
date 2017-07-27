@@ -181,19 +181,19 @@ $(document).ready(function() {
 		//option: layout -> when all items need to be laid out without filtering/sorting
 		$container.isotope('layout');
   	}
-  	$container.imagesLoaded(function() {
-  		setColumns();
-  	}).always( function( instance ) {
-   	console.log('all images loaded');
-	}).done( function( instance ) {
-   	console.log('all images successfully loaded');
+  	$container.imagesLoaded()
+	  	.always( function( instance ) {
+	   	console.log('all images loaded');
+	   	initIsotope();
+		}).done( function( instance ) {
+	   	console.log('all images successfully loaded');
   	});//imagesLoaded
-  	
+
   	//when window resizes, reinitialize isotope
   	$(window).bind('resize', function() {
   		initIsotope();
   	});
-  	initIsotope();
+  	
 
 	/* Toggling active classes in filters under portfolio*/
 	/* Also toggling filtering of isotope images underneath */
