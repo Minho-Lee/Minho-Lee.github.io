@@ -2,7 +2,7 @@
 
 Building a frontend webpage that demonstrates cool features from various different websites.
 Also, utilizing many different APIs and libraries for implementing some awesome features.
-
+Feel free to contact me for anything!
 
 [Live](https://leeminho.me)
 
@@ -23,6 +23,8 @@ Also, utilizing many different APIs and libraries for implementing some awesome 
 [Nivo-lightbox](https://github.com/Codeinwp/Nivo-Lightbox-jQuery)
 
 [IsotopeJs](https://isotope.metafizzy.co/)
+
+[imagesLoaded](https://imagesloaded.desandro.com/)
 
 [GoogleMaps](https://developers.google.com/maps/)
 
