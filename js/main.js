@@ -141,7 +141,7 @@ $(document).ready(function() {
 	$container.isotope({
 		itemSelector: '.portfolio-item',
 		animationEngine: 'best-available',
-      animationOptions: {
+      	animationOptions: {
           duration: 500,
           queue: false
       },
@@ -149,37 +149,46 @@ $(document).ready(function() {
 	});
 
 	// Split columns for different size layout (fits bootstrap sizes)
-  function splitColumns() {
-    var windowWidth = $(window).width(),
-      	columnNumber = 1; //  default column number
-    if (windowWidth > 1200) {
-    	columnNumber = 4;
-  	} else if (windowWidth > 767) {
-    	columnNumber = 3;
-  	} else if (windowWidth > 600) {
-      columnNumber = 2;
-  	}
-  	return columnNumber;
-  }
+   function splitColumns() {
+   	var windowWidth = $(window).width(),
+      	 columnNumber = 1; //  default column number
+    	if (windowWidth > 1200) {
+    		columnNumber = 4;
+  		} else if (windowWidth > 767) {
+    		columnNumber = 3;
+  		} else if (windowWidth > 600) {
+      	columnNumber = 2;
+  		}
+  		return columnNumber;
+   }
 
   // Set width for portfolio item (so it spans out to the browser fully as browser resizes)
   	function setColumns() {
     	var windowWidth = $(window).width(),
-      	columnNumber = splitColumns(),
-        	postWidth = Math.floor(windowWidth / columnNumber);
+      	 columnNumber = splitColumns(),
+        	 postWidth = Math.floor(windowWidth / columnNumber);
 
-   	$container.find('.portfolio-item').each(function() {
+   		$container.find('.portfolio-item').each(function() {
         	$(this).css({
       	   width: postWidth + 'px'
         	});
     	});
-  	}
+  	}//setColumns
+
   	// initialize isotope
   	function initIsotope() {
 		setColumns();
 		//option: layout -> when all items need to be laid out without filtering/sorting
 		$container.isotope('layout');
   	}
+  	$container.imagesLoaded(function() {
+  		setColumns();
+  	}).always( function( instance ) {
+   	console.log('all images loaded');
+	}).done( function( instance ) {
+   	console.log('all images successfully loaded');
+  	});//imagesLoaded
+  	
   	//when window resizes, reinitialize isotope
   	$(window).bind('resize', function() {
   		initIsotope();
@@ -224,9 +233,8 @@ $(document).ready(function() {
 		$(this).find(':checked').next().css('color', '#428bca');
 	})
 	
-	
 });//document.ready
-
+/* * * * * * * * * * * * * * * * * */
 
 //using bootstrap's scrollspy, keeps track of where the user is and navbar is updated accordingly
 //adds in animation according to the scroll position
