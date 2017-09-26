@@ -17,6 +17,7 @@ html, body {
   font-family: 'Plex-regular';
   src: url("../fonts/Opentype/IBMPlexSans-Regular-V01.1.otf");
 }
+
 #spinner-id {
   position: fixed;
   width: 100%;
@@ -734,7 +735,7 @@ img.img-default {
   position: relative;
   background: url(../img/contact-us.jpeg) center no-repeat fixed;
   background-size: cover;
-  font-family: 'Plex-regular';
+  font-family: 'Raleway', sans-serif;
 }
 #section6 .background-overlay{
   background: rgba(238, 238, 238, 0.3);
