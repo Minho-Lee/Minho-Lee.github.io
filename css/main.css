@@ -15,7 +15,7 @@ html, body {
 }
 @font-face {
   font-family: 'Plex-regular';
-  src: url('../fonts/Opentype/IBMPlexSans-Regular-V01.1.otf');
+  src: url(../fonts/Opentype/IBMPlexSans-Regular-V01.1.otf);
 }
 #spinner-id {
   position: fixed;
