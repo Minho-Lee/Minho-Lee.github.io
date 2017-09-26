@@ -7,15 +7,15 @@ html, body {
 }
 @font-face {
   font-family: 'Campton-bold';
-  src: url('../fonts/Campton-BoldDEMO.otf');
+  src: url(../fonts/Campton-BoldDEMO.otf);
 }
 @font-face {
   font-family: 'Campton-light';
-  src: url('../fonts/Campton-LightDEMO.otf');
+  src: url(../fonts/Campton-LightDEMO.otf);
 }
 @font-face {
   font-family: 'Plex-regular';
-  src: url('../fonts/Opentype/IBMPlexSans-Regular-V01.1.otf');
+  src: url(../fonts/Opentype/IBMPlexSans-Regular-V01.1.otf);
 }
 #spinner-id {
   position: fixed;
