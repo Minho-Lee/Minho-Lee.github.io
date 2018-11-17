@@ -4,7 +4,7 @@ Building a frontend webpage that demonstrates cool features from various differe
 Also, utilizing many different APIs and libraries for implementing some awesome features.
 Feel free to contact me for anything!
 
-[Live](https://leeminho.me)
+[Website!](https://minho-lee.github.io)
 
 [Krefolio](https://www.themezy.com/demos/183-krefolio-design-agency-free-responsive-bootstrap-template)
 
